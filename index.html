@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const name = prompt("Cual es tu nombre?")
+        const date = new Date();
+        const time = {
+            hour: date.getHours(),
+            minute: date.getMinutes(),
+        }
+        const Interpolar = () =>{
+            return (
+                <div>
+                    <h1>Hola {name}</h1>
+                    <hr/>
+                    <h1>La hora es: {time.hour} : {time.minute} </h1>
+                    <hr/>
+                    <h3>This program has made with React 💚</h3>
+                </div>
+                
+            )
+        }
+
+        ReactDOM.render(<Interpolar/>, document.getElementById("root"))
+    </script>
+</body>
+</html>
